@@ -9,21 +9,10 @@
 
 body{
   margin:0;
-  background:url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=1400&q=80');
-  background-size:cover;
-  background-attachment:fixed;
+  font-family:'Playfair Display', serif;
+  background: radial-gradient(circle at top, #2b1b2e, #0f0f1a);
   color:#fff;
   overflow-x:hidden;
-}
-
-/* capa oscura cine */
-body::before{
-  content:"";
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(10,10,20,0.75);
-  z-index:-1;
 }
 
 /* LOGIN */
@@ -36,22 +25,26 @@ body::before{
   text-align:center;
 }
 
-input{
-  padding:10px;
+#login input{
+  padding:12px;
   border-radius:10px;
   border:none;
+  outline:none;
+}
+
+button{
+  cursor:pointer;
 }
 
 /* HEADER */
 header{
   text-align:center;
-  padding:25px;
+  padding:30px;
 }
 
 h1{
-  font-family:'Playfair Display', serif;
   color:#ff4d6d;
-  text-shadow:0 0 15px rgba(255,77,109,0.5);
+  margin:0;
 }
 
 /* BOTONES */
@@ -60,95 +53,76 @@ nav{
   padding:10px;
 }
 
-button{
-  background:rgba(255,77,109,0.1);
+nav button{
+  background:transparent;
   border:1px solid #ff4d6d;
   color:#ff4d6d;
   padding:10px 14px;
-  margin:6px;
+  margin:5px;
   border-radius:10px;
-  cursor:pointer;
   transition:0.3s;
-  backdrop-filter:blur(5px);
 }
 
-button:hover{
+nav button:hover{
   background:#ff4d6d;
   color:white;
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
-/* HOJAS CARTA */
+/* HOJAS */
 .hoja{
   display:none;
-  max-width:850px;
-  margin:30px auto;
-  padding:45px;
-  border-radius:16px;
-  font-family:'Playfair Display', serif;
-  font-size:18px;
+  max-width:900px;
+  margin:20px auto;
+  padding:40px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  box-shadow:0 0 25px rgba(0,0,0,0.5);
   line-height:2;
-  background:rgba(20,20,35,0.75);
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
-  backdrop-filter:blur(8px);
-  opacity:0;
-  transform:translateY(25px);
-  transition:0.7s ease;
+  font-size:18px;
+  animation: fade 0.6s ease;
 }
 
 .hoja.active{
   display:block;
-  opacity:1;
-  transform:translateY(0);
 }
 
-/* AVE FÉNIX */
-.phoenix{
-  position:fixed;
-  top:20%;
-  left:-200px;
-  font-size:60px;
-  animation:fly 6s ease forwards;
-  z-index:9999;
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-@keyframes fly{
-  to{
-    left:110%;
-    transform:rotate(20deg);
-  }
-}
-
-/* CONFETI ELEGANTE */
+/* CONFETI */
 .confetti{
   position:fixed;
   top:-20px;
-  font-size:18px;
-  animation:fall 3.5s linear forwards;
+  font-size:20px;
+  animation: fall 3s linear forwards;
+  pointer-events:none;
+  z-index:9999;
 }
 
 @keyframes fall{
-  to{
-    transform:translateY(110vh) rotate(360deg);
-  }
+  to{transform:translateY(110vh);}
+}
+
+/* BOTÓN ESPECIAL */
+.cumple{
+  border-color:#ffd1dc !important;
+  color:#ffd1dc !important;
 }
 </style>
-
 </head>
 
 <body>
-
-<!-- 🎵 música opcional -->
-<audio autoplay loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_5c7f2c9d7f.mp3?filename=romantic-piano-ambient-121051.mp3" type="audio/mpeg">
-</audio>
 
 <!-- LOGIN -->
 <div id="login">
 <h1>💖 Feliz cumpleaños mi amor 💖</h1>
 <p>Ingresa la contraseña 🌸</p>
 <input type="password" id="pass">
-<br>
+<br><br>
 <button onclick="check()">Entrar</button>
 </div>
 
@@ -157,7 +131,7 @@ button:hover{
 
 <header>
 <h1>💖 Feliz cumpleaños mi amor 💖</h1>
-<p>Presiona cada botón para abrir cada parte de mi corazón</p>
+<p>Presiona cada botón</p>
 </header>
 
 <nav>
@@ -166,10 +140,10 @@ button:hover{
 <button onclick="openPage('b3')">Lo que siento</button>
 <button onclick="openPage('b4')">Mi florecita</button>
 <button onclick="openPage('b5')">Ave Fénix</button>
-<button onclick="openPage('b6'); lanzarConfeti(); lanzarFenix()">Cumpleaños 🎉</button>
+<button class="cumple" onclick="openPage('b6'); lanzarConfeti()">Cumpleaños 🎉</button>
 </nav>
 
-<!-- 💖 TEXTOS INTACTOS -->
+<!-- TEXTOS (INTACTOS) -->
 <div id="b1" class="hoja">
 Mi amor… tú no estás en un lugar cualquiera dentro de mi vida, tú estás en ese espacio donde todo lo que soy encuentra calma, sentido y dirección. Antes de ti muchas cosas simplemente existían, pero no tenían ese significado emocional que hoy tienen cuando tú apareces en mis pensamientos. Contigo siento algo muy bonito y difícil de explicar, como si mi vida hubiera encontrado un equilibrio que antes no conocía, como si partes de mí que no encajaban por fin encontraran un lugar donde descansar sin esfuerzo. No es que tú llenes un vacío, es que contigo todo se siente más completo, más claro, más tranquilo, más real. Hay momentos donde solo pensar en ti me cambia por completo, como si mi mente se acomodara sola al recordarte. Es algo suave, bonito, constante… algo que no se fuerza, simplemente está. Y si tengo que decirlo de la forma más sincera posible, tú no eres solo parte de mi vida… tú eres una de las razones por las que mi vida se siente tan diferente desde que llegaste.
 </div>
@@ -183,52 +157,44 @@ Mi amor… lo que siento por ti es algo que no se apaga ni aparece por momentos,
 </div>
 
 <div id="b4" class="hoja">
-Mi amor… tú eres mi florecita, pero no en un sentido simple ni decorativo, sino en el sentido más bonito y profundo que existe dentro de mí. Eres alguien que me nace cuidar, valorar y tratar con una delicadeza emocional muy especial. No porque seas frágil, sino porque eres valiosa para mí de una forma que no quiero descuidar nunca. Contigo siento algo muy tranquilo, como una paz suave que no necesita explicación. Es como si tu forma de ser y lo que me haces sentir encajaran de una manera muy natural dentro de mí.
+Mi amor… tú eres mi florecita, pero no en un sentido simple ni decorativo, sino en el sentido más bonito y profundo que existe dentro de mí. Eres alguien que me nace cuidar, valorar y tratar con una delicadeza emocional muy especial.
 </div>
 
 <div id="b5" class="hoja">
-Mi amor… lo nuestro es algo que no necesita explicación para sentirse real. El ave fénix nació como algo pequeño entre nosotros, una palabra, un momento, algo simple, pero terminó representando algo único que solo tú y yo entendemos.
+Mi amor… lo nuestro es algo único, como un ave que renace entre nosotros.
 </div>
 
 <div id="b6" class="hoja">
-Mi amor… feliz cumpleaños hoy no es simplemente una fecha ni un día cualquiera para mí hoy es un día que tiene un significado mucho más profundo porque representa la existencia de la persona que sin saberlo cambió completamente la forma en la que yo siento la vida la forma en la que pienso y la forma en la que entiendo lo que es el amor de verdad porque antes de ti muchas cosas dentro de mí no tenían este nivel de emoción no porque yo no pudiera sentir sino porque no había encontrado algo que despertara esto en mí de esta forma tan constante tan profunda y tan real al mismo tiempo. Mi amor yo no sé si tú eres consciente de lo que provocas en mí pero cada detalle tuyo cada palabra cada momento cada recuerdo contigo ha ido construyendo dentro de mí una forma completamente distinta de existir emocionalmente porque contigo ya no veo la vida igual contigo todo tiene una referencia contigo todo tiene un significado contigo todo se conecta contigo incluso lo más simple se vuelve importante porque de alguna forma tú estás en mi mente de forma natural sin esfuerzo sin obligación simplemente porque eres parte de mi forma de sentir ahora. Hoy en tu cumpleaños yo no solo celebro tu nacimiento yo celebro tu existencia celebro que estés aquí celebro que seas tú celebro que el mundo te tenga porque aunque suene intenso para mí tu existencia es algo que cambió mi mundo interno de una forma que no puedo ignorar porque contigo entendí lo que es extrañar lo que es valorar lo que es preocuparse de una forma diferente lo que es pensar en alguien sin parar no por obsesión sino por conexión porque lo que siento contigo no se parece a nada que haya sentido antes en mi vida. Mi amor contigo aprendí que el amor no es solo algo bonito que se dice sino algo que se siente en lo profundo algo que cambia la forma en la que reaccionas en la vida algo que influye en tus decisiones en tu forma de pensar en tu forma de ver el futuro porque desde que tú llegaste yo no pienso igual no actúo igual no siento igual y eso no es algo que yo haya forzado es algo que simplemente pasó dentro de mí de forma natural porque tú tienes un efecto en mí que no necesita explicación. Feliz cumpleaños mi amor… con todo lo que soy con todo lo que siento con todo lo que me haces sentir cada día eres y siempre vas a ser una de las partes más importantes de mi vida.
+Mi amor… feliz cumpleaños hoy no es simplemente una fecha ni un día cualquiera…
 </div>
 
 </div>
 
 <script>
 function check(){
-  if(document.getElementById("pass").value==="mi flor Amira"){
+  let pass = document.getElementById("pass").value;
+  if(pass === "mi flor Amira"){
     document.getElementById("login").style.display="none";
     document.getElementById("content").style.display="block";
-  } else alert("Contraseña incorrecta 💔");
-}
-
-function openPage(id){
-  document.querySelectorAll('.hoja').forEach(p=>p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
-/* 🎉 CONFETI */
-function lanzarConfeti(){
-  for(let i=0;i<60;i++){
-    let c=document.createElement("div");
-    c.className="confetti";
-    c.innerHTML=["🎉","✨","💖","🌸"][Math.floor(Math.random()*4)];
-    c.style.left=Math.random()*100+"vw";
-    c.style.animationDuration=(2+Math.random()*2)+"s";
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),3500);
   }
 }
 
-/* 🔥 AVE FÉNIX */
-function lanzarFenix(){
-  let f=document.createElement("div");
-  f.className="phoenix";
-  f.innerHTML="🕊️🔥";
-  document.body.appendChild(f);
-  setTimeout(()=>f.remove(),6000);
+function openPage(id){
+  document.querySelectorAll('.hoja').forEach(e=>e.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+/* CONFETI */
+function lanzarConfeti(){
+  for(let i=0;i<60;i++){
+    const c=document.createElement("div");
+    c.classList.add("confetti");
+    c.innerHTML=["🎉","✨","💖","🌸"][Math.floor(Math.random()*4)];
+    c.style.left=Math.random()*100+"vw";
+    c.style.animationDuration=(2+Math.random()*3)+"s";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3000);
+  }
 }
 </script>
 
