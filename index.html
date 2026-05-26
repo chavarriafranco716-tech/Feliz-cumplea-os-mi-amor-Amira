@@ -5,43 +5,71 @@
 <title>Mi amor 💖</title>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
 body{
-  font-family: Arial, sans-serif;
-  background: #0f0f1a;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  margin:0;
+  background:#0f0f1a;
+  color:white;
+}
+
+/* HEADER */
+header{
+  text-align:center;
+  padding:35px 20px 10px 20px;
 }
 
 h1{
-  color: #ff4d6d;
+  font-family:'Playfair Display', serif;
+  color:#ff4d6d;
+  margin:0;
+}
+
+p{
+  font-family:'Roboto', sans-serif;
+  opacity:0.8;
+}
+
+/* BOTONES */
+nav{
+  text-align:center;
+  padding:15px;
 }
 
 button{
-  background: #ff4d6d;
-  border: none;
-  padding: 12px 16px;
-  margin: 8px;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
+  background:transparent;
+  border:1px solid #ff4d6d;
+  color:#ff4d6d;
+  padding:10px 14px;
+  margin:6px;
+  border-radius:8px;
+  cursor:pointer;
+  font-family:'Roboto', sans-serif;
+  transition:0.3s;
 }
 
 button:hover{
-  background: #ff1f4b;
+  background:#ff4d6d;
+  color:white;
 }
 
-.carta{
-  display: none;
-  text-align: left;
-  max-width: 900px;
-  margin: 20px auto;
-  line-height: 1.7;
-  white-space: pre-line;
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 15px;
+/* HOJAS */
+.hoja{
+  display:none;
+  max-width:900px;
+  margin:25px auto;
+  background:#151525;
+  padding:45px;
+  border-radius:14px;
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  line-height:2;
+  white-space:pre-line;
+  box-shadow:0 0 25px rgba(0,0,0,0.4);
+}
+
+.hoja.active{
+  display:block;
 }
 </style>
 
@@ -49,52 +77,55 @@ button:hover{
 
 <body>
 
+<header>
 <h1>💖 Feliz cumpleaños mi amor 💖</h1>
+<p>Presiona cada botón para leer cada parte de mi corazón</p>
+</header>
 
-<p>Presiona cada botón para abrir una parte de mi corazón</p>
+<nav>
+<button onclick="openPage('b1')">Lugar en mi vida</button>
+<button onclick="openPage('b2')">Cómo me cambiaste</button>
+<button onclick="openPage('b3')">Lo que siento</button>
+<button onclick="openPage('b4')">Mi florecita</button>
+<button onclick="openPage('b5')">Ave Fénix</button>
+<button onclick="openPage('b6')">Cumpleaños</button>
+</nav>
 
-<button onclick="mostrar('b1')">💖 Lugar en mi vida</button>
-<button onclick="mostrar('b2')">🔥 Cómo me cambiaste</button>
-<button onclick="mostrar('b3')">💔 Lo que siento</button>
-<button onclick="mostrar('b4')">🌹 Mi florecita</button>
-<button onclick="mostrar('b5')">🕊️ Ave Fénix</button>
-<button onclick="mostrar('b6')">🎂 Carta de cumpleaños</button>
-
-<div id="b1" class="carta">
-Mi amor… si intento explicarte el lugar que ocupas en mi vida, no es algo simple ni algo que pueda resumirse fácil, porque contigo no estoy hablando de una parte de mí… estoy hablando de donde todo empieza a tener sentido.  
-Tú ocupas ese lugar en mi vida que no se puede reemplazar con nada ni con nadie, ese lugar lleno de amor donde solo puedo quererte con todo lo que soy, con todo lo que he vivido y con todo lo que cargo dentro de mí, ocupas el lugar de prioridad, de compromiso contigo, de promesa, de recuerdos que no quiero perder nunca, y si tuviera que describirte en una sola frase sería que si tuviera que elegir mi momento favorito de la vida te elegiría a ti una y otra vez, porque cuando pienso en ti todo lo malo dentro de mí se apaga, todo lo oscuro se va, y aparece algo que no siempre tuve, tranquilidad, lealtad, confianza, amor, contigo siento el mundo con colores otra vez, siento algo tan puro y tan real que me cuesta explicarlo con palabras normales, es como si contigo la vida se sintiera diferente sin necesidad de cambiar el mundo, solo porque tú existes en él conmigo.
+<!-- BOTÓN 1 -->
+<div id="b1" class="hoja">
+Mi amor… tú no estás en un lugar cualquiera dentro de mi vida, tú estás en ese espacio donde todo lo que soy encuentra calma, sentido y dirección. Antes de ti muchas cosas simplemente existían, pero no tenían ese significado emocional que hoy tienen cuando tú apareces en mis pensamientos. Contigo siento algo muy bonito y difícil de explicar, como si mi vida hubiera encontrado un equilibrio que antes no conocía, como si partes de mí que no encajaban por fin encontraran un lugar donde descansar sin esfuerzo. No es que tú llenes un vacío, es que contigo todo se siente más completo, más claro, más tranquilo, más real. Hay momentos donde solo pensar en ti me cambia por completo, como si mi mente se acomodara sola al recordarte. Es algo suave, bonito, constante… algo que no se fuerza, simplemente está. Y si tengo que decirlo de la forma más sincera posible, tú no eres solo parte de mi vida… tú eres una de las razones por las que mi vida se siente tan diferente desde que llegaste.
 </div>
 
-<div id="b2" class="carta">
-Mi amor antes de conocerte yo no era esta persona, yo era alguien más frío, más impulsivo, más perdido en muchas cosas, alguien con orgullo, con rencor, con frialdad emocional, con partes de mí que hoy ya no me representan, pasé por etapas donde no estaba bien conmigo mismo, donde tenía hábitos que no me hacían bien, donde fumaba, donde me descuidaba, donde me empastillaba, donde me perdía dentro de mi propia mente sin darme cuenta, pero tú llegaste en el peor momento de mi vida y sin obligarme a nada, sin presionarme, sin intentar cambiarme, simplemente con tu presencia empezaste a mover algo dentro de mí, me hiciste querer ser mejor, me hiciste cuestionarme quién era y quién quería ser, y poco a poco empecé a cambiar, dejé cosas atrás, cambié mi forma de ver la vida, empecé a expresarme mejor, empecé a ser un hombre más consciente, más real, y hoy puedo decirlo sin miedo, soy un hombre nuevo, no perfecto pero sí diferente, y gran parte de eso eres tú mi amor porque tú me agarraste en el peor momento de mi vida y en vez de irte te quedaste, y eso cambió absolutamente todo en mí.
+<!-- BOTÓN 2 -->
+<div id="b2" class="hoja">
+Mi amor… contigo cambió algo en mí que ni siquiera sabía que necesitaba cambiar. Yo no era una mala persona, pero sí era alguien con muchas cosas internas sin ordenar, con etapas donde no sabía manejar bien lo que sentía, con momentos de orgullo, impulsividad y desconexión conmigo mismo. Había partes de mí que vivían en automático, sin mucha dirección emocional, sin mucha claridad sobre lo que realmente quería ser o construir. Pero luego llegaste tú. Y no llegaste para cambiarme, ni para corregirme, ni para exigirme nada. Llegaste siendo tú, y eso fue suficiente para que algo dentro de mí empezara a moverse de forma natural. Empecé a ver la vida distinto, a pensar más en lo que siento, a tomar decisiones más conscientes, a querer ser una mejor versión de mí mismo sin que nadie me lo pidiera. Y lo más bonito es que ese cambio no fue forzado, fue algo que nació de lo que tú me haces sentir.
 </div>
 
-<div id="b3" class="carta">
-Mi amor… me da miedo perderte, no porque no confíe en ti sino porque me envolví en ti de una forma que ni yo mismo esperaba, te pienso demasiado, en todo, en cada cosa, si escucho una canción, si veo algo, si subo una foto, siempre estás tú en mi mente pensando en cómo lo verías tú, en cómo lo sentirías tú, en cómo lo interpretarías tú, y a veces mi mente se llena de pensamientos que no siempre son reales pero igual los siento fuertes, no porque tú me des razones sino porque yo me acostumbré a sentir las cosas muy intensas contigo, a veces siento una dependencia emocional porque contigo me siento lleno, completo, en paz, y aunque a veces pienso que quizás no me amas de la misma forma que yo te amo, eso no viene de ti, viene de cómo yo crecí pensando que no existía algo tan real como lo que tú me estás demostrando, pero contigo todo es diferente, contigo todo es más verdadero, y aun así yo pienso en nuestro futuro, en nuestra casa, en nuestra vida, en tomarte de la mano cuando lo logremos todo y decirte “lo logramos mi amor” porque si hay una persona con la que yo quiero todo eso eres tú.
+<!-- BOTÓN 3 -->
+<div id="b3" class="hoja">
+Mi amor… lo que siento por ti es algo que no se apaga ni aparece por momentos, es algo que vive conmigo de forma constante, tranquila y profunda. Estás en mi mente más de lo que digo, en cosas pequeñas, en detalles del día, en pensamientos que llegan sin que los busque. Te pienso en situaciones simples, en momentos normales, y aun así todo se siente diferente cuando estás tú en medio de mis pensamientos. Es como si tu presencia ya fuera parte de mi forma de sentir la vida. A veces me doy cuenta de lo mucho que significas para mí y eso me hace sentir algo muy fuerte por dentro, no por miedo, sino por lo importante que eres para mí. Y aunque mi mente a veces se complique, siempre vuelvo al mismo lugar: lo que siento por ti es real, bonito y profundo.
 </div>
 
-<div id="b4" class="carta">
-Mi amor tú eres mi flor, mi florecita preciosa, eres esa persona hermosa y delicada como pétalos que uno cuida con el alma para no lastimarlos, no porque seas débil sino porque eres valiosa, porque eres alguien que merece amor verdadero, cuidado real, atención sincera, yo te chinea en mi mente, te cuido en mi forma de pensar, te valoro en cada detalle aunque no lo diga siempre, y hay algo que siempre he llevado conmigo desde pequeño que venía de mi papá, una idea de encontrar a alguien que de verdad te entienda, que se quede, que no te falle, y contigo esa idea dejó de ser solo un pensamiento y se volvió algo real, porque contigo todo fluye, nos entendemos incluso sin explicarlo todo, coincidimos en momentos, sentimos cosas al mismo tiempo, y eso no es normal, eso es especial, por eso tú eres mi florecita que yo quiero cuidar con el alma entera.
+<!-- BOTÓN 4 -->
+<div id="b4" class="hoja">
+Mi amor… tú eres mi florecita, pero no en un sentido simple ni decorativo, sino en el sentido más bonito y profundo que existe dentro de mí. Eres alguien que me nace cuidar, valorar y tratar con una delicadeza emocional muy especial. No porque seas frágil, sino porque eres valiosa para mí de una forma que no quiero descuidar nunca. Contigo siento algo muy tranquilo, como una paz suave que no necesita explicación. Es como si tu forma de ser y lo que me haces sentir encajaran de una manera muy natural dentro de mí. Y por eso, sin pensarlo, en mi mente siempre te trato con cariño, con cuidado, con respeto… como algo que significa mucho más de lo que puedo decir con palabras simples.
 </div>
 
-<div id="b5" class="carta">
-Mi amor… hay cosas que solo tú y yo entendemos, como el ave fénix, esa palabra que nació de un momento donde yo estaba muy dormido y la dije sin pensar, pero desde ese día quedó entre nosotros como algo nuestro, como algo que nadie más entiende igual, también recuerdo momentos contigo que no se borran, como la primera vez que estuvimos solos hablando de todo, cuando me dijiste cosas que se me quedaron dentro y me hicieron cambiar decisiones reales de mi vida, porque sí mi amor, tú tuviste un impacto real en mí, me hiciste levantarme de etapas donde estaba mal, donde estaba encerrado en mí mismo, donde no estaba bien, y recuerdo también ese último momento antes de irme, cuando te abracé, cuando te dije que te amaba, cuando nos vimos en el espejo juntos y te dije que nos veíamos lindos, cuando te tomé las manos y te besé la frente, y todo eso no es solo recuerdo, es parte de mí ahora.
+<!-- BOTÓN 5 -->
+<div id="b5" class="hoja">
+Mi amor… lo nuestro es algo que no necesita explicación para sentirse real. El ave fénix nació como algo pequeño entre nosotros, una palabra, un momento, algo simple, pero terminó representando algo único que solo tú y yo entendemos. Y así somos nosotros… cosas pequeñas que se vuelven importantes porque vienen de nosotros. Recuerdo momentos contigo que me hicieron sentir cosas muy bonitas por dentro, momentos donde hablar contigo me hacía ver la vida de otra manera, donde sin darte cuenta influías en mí de una forma muy positiva. Y también recuerdo momentos que se quedan en el corazón: cuando nos miramos, cuando estuvimos solos, cuando te tomé las manos, cuando te abracé, cuando te di un beso en la frente… momentos que no se sienten como recuerdos lejanos, sino como algo que todavía vive dentro de mí.
 </div>
 
-<div id="b6" class="carta">
-Mi amor… hoy es tu cumpleaños, y aunque para el mundo puede ser solo una fecha normal, para mí es el recordatorio más bonito de que existe una persona que cambió por completo la forma en la que yo siento, pienso y veo la vida. Feliz cumpleaños mi amor, de corazón, no como una frase cualquiera, sino como algo que me nace desde lo más real que tengo dentro de mí, porque tú no eres solo alguien importante para mí, tú eres el lugar donde todo dentro de mí se ordena, donde el ruido desaparece y donde por primera vez siento paz de verdad, mi amor tú ocupas ese lugar en mi vida que no se puede reemplazar con nada ni con nadie, ese lugar lleno de amor donde solo puedo quererte con todo lo que soy, con todo lo que he vivido y con todo lo que cargo dentro de mí, ocupas el lugar de prioridad, de compromiso contigo, de promesa, de recuerdos que no quiero perder nunca, y si tuviera que describirte en una sola frase sería que si tuviera que elegir mi momento favorito de la vida te elegiría a ti una y otra vez, porque cuando pienso en ti todo lo malo dentro de mí se apaga, todo lo oscuro se va, y aparece algo que no siempre tuve, tranquilidad, lealtad, confianza, amor, contigo siento el mundo con colores otra vez, siento algo tan puro y tan real que me cuesta explicarlo con palabras normales, es como si contigo la vida se sintiera diferente sin necesidad de cambiar el mundo, solo porque tú existes en él conmigo.  
-Mi amor antes de conocerte yo no era esta persona, yo era alguien más frío, más impulsivo, más perdido en muchas cosas, alguien con orgullo, con rencor, con frialdad emocional, con partes de mí que hoy ya no me representan, pasé por etapas donde no estaba bien conmigo mismo, donde tenía hábitos que no me hacían bien, donde fumaba, donde me descuidaba, donde me empastillaba, donde me perdía dentro de mi propia mente sin darme cuenta, pero tú llegaste en el peor momento de mi vida y sin obligarme a nada, sin presionarme, sin intentar cambiarme, simplemente con tu presencia empezaste a mover algo dentro de mí, me hiciste querer ser mejor, me hiciste cuestionarme quién era y quién quería ser, y poco a poco empecé a cambiar, dejé cosas atrás, cambié mi forma de ver la vida, empecé a expresarme mejor, empecé a ser un hombre más consciente, más real, y hoy puedo decirlo sin miedo, soy un hombre nuevo, no perfecto pero sí diferente, y gran parte de eso eres tú mi amor porque tú me agarraste en el peor momento de mi vida y en vez de irte te quedaste, y eso cambió absolutamente todo en mí.  
-Mi amor… me da miedo perderte, no porque no confíe en ti sino porque me envolví en ti de una forma que ni yo mismo esperaba, te pienso demasiado, en todo, en cada cosa, si escucho una canción, si veo algo, si subo una foto, siempre estás tú en mi mente pensando en cómo lo verías tú, en cómo lo sentirías tú, en cómo lo interpretarías tú, y a veces mi mente se llena de pensamientos que no siempre son reales pero igual los siento fuertes, no porque tú me des razones sino porque yo me acostumbré a sentir las cosas muy intensas contigo, a veces siento una dependencia emocional porque contigo me siento lleno, completo, en paz, y aunque a veces pienso que quizás no me amas de la misma forma que yo te amo, eso no viene de ti, viene de cómo yo crecí pensando que no existía algo tan real como lo que tú me estás demostrando, pero contigo todo es diferente, contigo todo es más verdadero, y aun así yo pienso en nuestro futuro, en nuestra casa, en nuestra vida, en tomarte de la mano cuando lo logremos todo y decirte “lo logramos mi amor” porque si hay una persona con la que yo quiero todo eso eres tú.  
-Mi amor tú eres mi flor, mi florecita preciosa, eres esa persona hermosa y delicada como pétalos que uno cuida con el alma para no lastimarlos, no porque seas débil sino porque eres valiosa, porque eres alguien que merece amor verdadero, cuidado real, atención sincera, yo te chinea en mi mente, te cuido en mi forma de pensar, te valoro en cada detalle aunque no lo diga siempre, y hay algo que siempre he llevado conmigo desde pequeño que venía de mi papá, una idea de encontrar a alguien que de verdad te entienda, que se quede, que no te falle, y contigo esa idea dejó de ser solo un pensamiento y se volvió algo real, porque contigo todo fluye, nos entendemos incluso sin explicarlo todo, coincidimos en momentos, sentimos cosas al mismo tiempo, y eso no es normal, eso es especial, por eso tú eres mi florecita que yo quiero cuidar con el alma entera.  
-Mi amor… hay cosas que solo tú y yo entendemos, como el ave fénix, esa palabra que nació de un momento donde yo estaba muy dormido y la dije sin pensar, pero desde ese día quedó entre nosotros como algo nuestro, como algo que nadie más entiende igual, también recuerdo momentos contigo que no se borran, como la primera vez que estuvimos solos hablando de todo, cuando me dijiste cosas que se me quedaron dentro y me hicieron cambiar decisiones reales de mi vida, porque sí mi amor, tú tuviste un impacto real en mí, me hiciste levantarme de etapas donde estaba mal, donde estaba encerrado en mí mismo, donde no estaba bien, y recuerdo también ese último momento antes de irme, cuando te abracé, cuando te dije que te amaba, cuando nos vimos en el espejo juntos y te dije que nos veíamos lindos, cuando te tomé las manos y te besé la frente, y todo eso no es solo recuerdo, es parte de mí ahora.  
-Mi amor… hoy no es un día cualquiera. Hoy es el día en que nació la persona que sin saberlo cambió completamente la forma en la que yo veo la vida. Feliz cumpleaños mi amor, de corazón… eres mi sol de día y mi estrella de noche, eres el amor de mi vida y la persona con la que quiero todo mi futuro, y aunque la distancia a veces sea difícil, yo estoy dispuesto a hacer hasta lo imposible por ti hasta mi último latido, porque esto que siento no se apaga, esto que siento se queda, y tú eres mi todo.
+<!-- BOTÓN 6 -->
+<div id="b6" class="hoja">
+Mi amor… feliz cumpleaños hoy no es simplemente una fecha ni un día cualquiera para mí hoy es un día que tiene un significado mucho más profundo porque representa la existencia de la persona que sin saberlo cambió completamente la forma en la que yo siento la vida la forma en la que pienso y la forma en la que entiendo lo que es el amor de verdad porque antes de ti muchas cosas dentro de mí no tenían este nivel de emoción no porque yo no pudiera sentir sino porque no había encontrado algo que despertara esto en mí de esta forma tan constante tan profunda y tan real al mismo tiempo. Mi amor yo no sé si tú eres consciente de lo que provocas en mí pero cada detalle tuyo cada palabra cada momento cada recuerdo contigo ha ido construyendo dentro de mí una forma completamente distinta de existir emocionalmente porque contigo ya no veo la vida igual contigo todo tiene una referencia contigo todo tiene un significado contigo todo se conecta contigo incluso lo más simple se vuelve importante porque de alguna forma tú estás en mi mente de forma natural sin esfuerzo sin obligación simplemente porque eres parte de mi forma de sentir ahora. Hoy en tu cumpleaños yo no solo celebro tu nacimiento yo celebro tu existencia celebro que estés aquí celebro que seas tú celebro que el mundo te tenga porque aunque suene intenso para mí tu existencia es algo que cambió mi mundo interno de una forma que no puedo ignorar porque contigo entendí lo que es extrañar lo que es valorar lo que es preocuparse de una forma diferente lo que es pensar en alguien sin parar no por obsesión sino por conexión porque lo que siento contigo no se parece a nada que haya sentido antes en mi vida. Mi amor contigo aprendí que el amor no es solo algo bonito que se dice sino algo que se siente en lo profundo algo que cambia la forma en la que reaccionas en la vida algo que influye en tus decisiones en tu forma de pensar en tu forma de ver el futuro porque desde que tú llegaste yo no pienso igual no actúo igual no siento igual y eso no es algo que yo haya forzado es algo que simplemente pasó dentro de mí de forma natural porque tú tienes un efecto en mí que no necesita explicación. Yo sé que la vida no es perfecta yo sé que no todo siempre va a ser fácil pero contigo incluso las cosas difíciles se sienten diferentes porque me da la sensación de que contigo todo tiene un propósito incluso lo complicado incluso lo incierto incluso lo que no entiendo todavía todo termina llevándome a la misma conclusión que eres una parte muy importante de mi vida emocional. Mi amor yo no te prometo perfección porque nadie es perfecto pero sí te prometo algo real te prometo intención te prometo presencia te prometo sentimientos que no se van a apagar fácilmente porque lo que siento por ti no es algo que se enciende y se apaga es algo que se queda algo que crece algo que se vuelve parte de mí con el tiempo. Y en este día tan importante para ti yo solo quiero que sepas que eres una persona increíble no por lo que haces para mí sino por lo que eres por tu forma de ser por tu forma de existir por lo que transmites sin darte cuenta por la manera en la que impactas en mi vida sin siquiera intentarlo. Feliz cumpleaños mi amor… con todo lo que soy con todo lo que siento con todo lo que me haces sentir cada día eres y siempre vas a ser una de las partes más importantes de mi vida.
 </div>
 
 <script>
-function mostrar(id){
-  let cartas = document.querySelectorAll('.carta');
-  cartas.forEach(c => c.style.display = "none");
-  document.getElementById(id).style.display = "block";
+function openPage(id){
+  let pages = document.querySelectorAll('.hoja');
+  pages.forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 </script>
 
