@@ -3,63 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Feliz cumpleaños mi amor ❤️</title>
+<title>Para ti ❤️</title>
 
 <style>
 body{
-background: linear-gradient(135deg,#ff6fa5,#ffb6c1);
+margin:0;
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
+background:linear-gradient(135deg,#ff6fa5,#ffb6c1);
 font-family:Arial,sans-serif;
-overflow:hidden;
-margin:0;
-}
-
-.contenedor{
-text-align:center;
 color:white;
-padding:20px;
+text-align:center;
 }
 
-h1{
-font-size:3em;
-animation:latido 1.5s infinite;
+#contenido{
+display:none;
+padding:20px;
+max-width:600px;
+}
+
+input{
+padding:12px;
+border:none;
+border-radius:20px;
+font-size:16px;
 }
 
 button{
-padding:15px 30px;
-font-size:20px;
+padding:12px 20px;
 border:none;
-border-radius:30px;
+border-radius:20px;
+font-size:16px;
 cursor:pointer;
+margin-top:10px;
 }
 
-@keyframes latido{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+#login{
+padding:20px;
+max-width:500px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="contenedor">
-<h1>feliz cumpleaños amira ❤️</h1>
+<div id="login">
+<h1>❤️</h1>
 
-<p>hay algo muy especial esperándote...</p>
+<h2>solo una persona puede abrir esta carta</h2>
 
-<button onclick="mostrarMensaje()">
-abrir sorpresa
-</button>
+<p>si esta carta llegó hasta tus manos, significa que alguien te ama muchísimo</p>
+
+<p>escribe la palabra secreta 🌸</p>
+
+<input type="password" id="clave">
+
+<br><br>
+
+<button onclick="entrar()">abrir carta ❤️</button>
+</div>
+
+<div id="contenido">
+
+<h1>feliz cumpleaños mi amor ❤️</h1>
+
+<p>
+si estás leyendo esto, significa que encontraste la llave de mi corazón.
+</p>
+
+<p>
+gracias por existir, por llegar a mi vida y por hacerme sentir tantas cosas bonitas en tan poco tiempo.
+</p>
+
+<p>
+tal vez llevamos poco tiempo juntos, pero contigo he sentido una conexión que jamás imaginé sentir con alguien.
+</p>
+
+<p>
+espero que hoy tengas un cumpleaños hermoso, que sonrías muchísimo y que nunca olvides lo especial que eres para mí.
+</p>
+
+<p>
+te quiero, te admiro y agradezco cada día que puedo compartir contigo.
+</p>
+
+<p>
+feliz cumpleaños mi florecita 🌸❤️
+</p>
+
 </div>
 
 <script>
-function mostrarMensaje(){
-alert("feliz cumpleaños mi amor ❤️ gracias por llegar a mi vida");
+function entrar(){
+
+let clave = document.getElementById("clave").value;
+
+if(clave==="miflorecita"){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("contenido").style.display="block";
+
+}else{
+
+alert("esa no es la palabra secreta ❤️");
+
+}
+
 }
 </script>
 
