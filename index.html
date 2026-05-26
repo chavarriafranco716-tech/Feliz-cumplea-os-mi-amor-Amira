@@ -2,25 +2,22 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Para ti 🌸💌🎂</title>
+<title>Para Amira 🌸💌</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000000, #1a1a1a);
+  background: black;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   overflow-x: hidden;
 }
 
 .center {
   text-align: center;
-  max-width: 750px;
   padding: 20px;
+  max-width: 750px;
+  margin: auto;
 }
 
 button, input {
@@ -34,6 +31,16 @@ button {
   background: #e91e63;
   color: white;
   cursor: pointer;
+}
+
+/* INTRO */
+#intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(circle, #1a1a1a, black);
 }
 
 .panel {
@@ -60,162 +67,65 @@ button {
   from {transform: translateY(100vh);}
   to {transform: translateY(-10vh); opacity: 0;}
 }
-
-h1,h2 {
-  color: #ff4d6d;
-}
 </style>
 </head>
 
 <body>
 
-<div class="center">
-
-<!-- 🎂 CUMPLEAÑOS -->
-<h1>🎂 Feliz cumpleaños mi amor</h1>
-
-<div class="panel" style="display:block;">
-<p>
-Hoy es un día especial… el día en que nació la persona más importante de mi vida.
-</p>
-
-<p>
-Gracias por existir, por ser tú y por cambiar mi mundo.
-</p>
-
-<p>
-Si pudiera pedir un deseo sería vivir todos tus cumpleaños contigo.
-</p>
-
-<p>
-Te amo, mi florecita 🌸
-</p>
+<!-- 🎬 INTRO -->
+<div id="intro">
+  <h1>🌸 Para Amira mi flor</h1>
+  <p>Presiona para entrar 💌</p>
+  <button onclick="start()">Entrar</button>
 </div>
 
-<button onclick="openLogin()">💌 Abrir carta de amor</button>
-
 <!-- 🔐 LOGIN -->
-<div id="login" class="panel">
-<h2>🌸 Carta de amor</h2>
-
-<p>Escribe la palabra que significa lo que eres para mí</p>
-
-<input id="clave" placeholder="Escribe aquí">
-<br>
-<button onclick="check()">Entrar</button>
-
-<p id="error"></p>
+<div id="login" class="center panel">
+  <h2>🌸 Escribe la palabra secreta</h2>
+  <input id="clave" placeholder="Escribe aquí">
+  <br>
+  <button onclick="check()">Entrar</button>
+  <p id="error"></p>
 </div>
 
 <!-- 💌 CARTA -->
-<div id="carta" class="panel">
+<div id="carta" class="center panel">
 
 <h2>💌 Para mi florecita</h2>
 
-<p>
-Mi amor… aquí están cosas que nunca te dije bien.
-</p>
+<p>Eres mi paz, mi vida y mi todo 🌸</p>
 
-<button onclick="toggle('c1')">🌸 1. Lo que eres</button>
-<button onclick="toggle('c2')">🧠 2. Cómo me cambiaste</button>
-<button onclick="toggle('c3')">💖 3. Lo que siento</button>
-<button onclick="toggle('c4')">🌸 4. La flor</button>
-<button onclick="toggle('c5')">💌 5. Momentos</button>
-<button onclick="toggle('c6')">🌙 6. Futuro</button>
+<button onclick="toggle('c1')">🌸 Lo que eres</button>
+<button onclick="toggle('c2')">🧠 Cambiaste mi vida</button>
+<button onclick="toggle('c3')">💖 Lo que siento</button>
+<button onclick="toggle('c4')">🌸 La flor</button>
+<button onclick="toggle('c5')">💌 Momentos</button>
+<button onclick="toggle('c6')">🌙 Futuro</button>
 
-<div id="c1" class="panel">
-<p>
-Eres mi paz, mi amor, mi prioridad y mi lugar seguro.
-</p>
-<p>
-“Si tuviera que elegir mi momento favorito de la vida, te elegiría a ti una y otra vez.”
-</p>
-<p>
-Contigo todo lo malo desaparece.
-</p>
-</div>
+<div id="c1" class="panel">Eres mi lugar seguro 💖</div>
+<div id="c2" class="panel">Me cambiaste por completo 🧠</div>
+<div id="c3" class="panel">Te amo más de lo que puedo explicar 💌</div>
+<div id="c4" class="panel">Eres mi flor, como me enseñó mi papá 🌸</div>
+<div id="c5" class="panel">Nuestros momentos son únicos 💖</div>
+<div id="c6" class="panel">Quiero un futuro contigo 🌙</div>
 
-<div id="c2" class="panel">
-<p>
-Antes de ti era frío, perdido y con problemas.
-</p>
-<p>
-Tú llegaste y me cambiaste sin darte cuenta.
-</p>
-<p>
-Dejé vicios, orgullo y frialdad.
-</p>
-<p>
-Me convertí en alguien mejor por ti.
-</p>
-</div>
+<!-- 🎵 PLAYLIST -->
+<h3 style="color:#ff4d6d;">🎵 Canciones para ti</h3>
 
-<div id="c3" class="panel">
-<p>
-Me da miedo perderte porque te amo demasiado.
-</p>
-<p>
-Siempre estás en mi mente.
-</p>
-<p>
-A veces pienso demasiado, pero contigo todo se siente real.
-</p>
-<p>
-Quiero un futuro contigo.
-</p>
-</div>
+<button onclick="play('j4eBgK51U04')">💌 Ausente</button>
+<button onclick="play('oiGCL2Ld534')">💖 La Boda</button>
+<button onclick="play('vOwmQbSv1JE')">🌙 La Carta</button>
 
-<div id="c4" class="panel">
-<p>
-Mi papá me dijo que si encontraba una flor especial debía cuidarla con el alma.
-</p>
-<p>
-Y tú eres esa flor 🌸
-</p>
-<p>
-Mi florecita, la que voy a proteger siempre.
-</p>
-</div>
+<br><br>
 
-<div id="c5" class="panel">
-<p>
-Dejé de fumar por ti.
-</p>
-<p>
-El espejo contigo, el abrazo antes de irme…
-</p>
-<p>
-Y nuestro “ave fénix”.
-</p>
-</div>
-
-<div id="c6" class="panel">
-<p>
-Sueño contigo y con nosotros.
-</p>
-<p>
-Quiero estar en todos tus cumpleaños.
-</p>
-<p>
-Quiero decirte un día: “lo logramos”.
-</p>
-<p>
-Eres mi todo.
-</p>
-</div>
-
-</div>
-
-<!-- 🎵 MÚSICA -->
-<audio id="music" loop>
-<source src="musica.mp3" type="audio/mpeg">
-</audio>
+<iframe id="player" width="0" height="0" src="" allow="autoplay"></iframe>
 
 </div>
 
 <script>
 
-function openLogin() {
+function start() {
+  document.getElementById("intro").style.display = "none";
   document.getElementById("login").style.display = "block";
 }
 
@@ -225,16 +135,23 @@ function check() {
   if (clave === "para amira mi flor") {
     document.getElementById("login").style.display = "none";
     document.getElementById("carta").style.display = "block";
-    document.getElementById("music").play();
     hearts();
   } else {
-    document.getElementById("error").innerText = "No es la palabra correcta 🌸";
+    document.getElementById("error").innerText = "Incorrecto 🌸";
   }
 }
 
 function toggle(id) {
   let el = document.getElementById(id);
   el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+function play(id) {
+  document.getElementById("player").src =
+    "https://www.youtube.com/embed/" +
+    id +
+    "?autoplay=1&loop=1&playlist=" +
+    id;
 }
 
 function hearts() {
