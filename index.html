@@ -5,113 +5,287 @@
 <title>Para Amira 🌸💌</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: black;
-  color: white;
-  text-align: center;
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+overflow-x:hidden;
 }
 
-button {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 10px;
-  border: none;
-  background: #e91e63;
-  color: white;
-  cursor: pointer;
+/* INTRO */
+#intro{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:fade 2s ease;
 }
 
-#carta {
-  display: none;
-  padding: 20px;
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
 }
 
-.panel {
-  display: none;
-  margin-top: 10px;
-  padding: 10px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 10px;
+/* LOGIN */
+#login{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
 }
+
+input,button{
+padding:12px;
+margin:6px;
+border-radius:10px;
+border:none;
+}
+
+button{
+background:#e91e63;
+color:white;
+cursor:pointer;
+}
+
+/* MENU */
+#menu{
+display:none;
+padding:30px;
+text-align:center;
+}
+
+/* PAGES */
+.page{
+display:none;
+padding:40px;
+max-width:850px;
+margin:auto;
+animation:slide 0.7s ease;
+}
+
+@keyframes slide{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.box{
+background:rgba(255,255,255,0.06);
+padding:25px;
+border-radius:15px;
+backdrop-filter: blur(8px);
+line-height:1.6;
+}
+
+/* NAV */
+.nav button{
+display:block;
+width:100%;
+margin:10px 0;
+}
+
+/* BACK */
+.back{
+background:#444;
+}
+
+/* HEARTS */
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:18px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);opacity:0;}
+}
+
+/* BIRTHDAY SPECIAL */
+.birthday{
+background:linear-gradient(135deg,#ff4d6d33,#ffffff10);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.2);
+line-height:1.7;
+}
+
+h1,h2{text-align:center;}
 </style>
 </head>
 
 <body>
 
-<h1>🌸 Para Amira mi flor</h1>
-
-<p>Presiona para entrar 💌</p>
-
+<!-- INTRO -->
+<div id="intro">
+<h1>🎬 Una historia para Amira</h1>
+<p>Presiona para comenzar 💌</p>
 <button onclick="start()">Entrar</button>
-
-<div id="carta">
-
-<h2>💌 Mi carta para ti</h2>
-
-<p>Eres mi paz, mi amor y mi todo 🌸</p>
-
-<button onclick="toggle('c1')">🌸 Lo que eres</button>
-<button onclick="toggle('c2')">🧠 Mi cambio</button>
-<button onclick="toggle('c3')">💖 Lo que siento</button>
-<button onclick="toggle('c4')">🌸 La flor de mi papá</button>
-<button onclick="toggle('c5')">💌 Momentos</button>
-<button onclick="toggle('c6')">🌙 Futuro</button>
-
-<div id="c1" class="panel">
-Eres mi lugar seguro 💖
 </div>
 
-<div id="c2" class="panel">
-Antes era frío, perdido y con vicios… pero tú me cambiaste.
+<!-- LOGIN -->
+<div id="login">
+<h1>🌸 Contraseña</h1>
+<input id="pass" placeholder="escribe aquí">
+<button onclick="enter()">Entrar</button>
+<p id="err"></p>
 </div>
 
-<div id="c3" class="panel">
-Te amo más de lo que puedo explicar 💌
+<!-- MENU -->
+<div id="menu">
+
+<h2>💌 Elige una historia</h2>
+
+<div class="nav">
+<button onclick="openPage('carta')">🌸 Carta principal</button>
+<button onclick="openPage('cambio')">🧠 Mi cambio</button>
+<button onclick="openPage('amor')">💖 Lo que siento</button>
+<button onclick="openPage('flor')">🌸 La flor</button>
+<button onclick="openPage('momentos')">💌 Momentos</button>
+<button onclick="openPage('futuro')">🌙 Futuro</button>
+<button onclick="openPage('cumple')">🎂 Carta de cumpleaños</button>
 </div>
 
-<div id="c4" class="panel">
-Mi papá me habló de una flor… y tú eres esa flor 🌸
 </div>
 
-<div id="c5" class="panel">
-El ave fénix, nuestros momentos, el espejo… recuerdos únicos 💖
+<!-- PAGES -->
+
+<div id="carta" class="page">
+<div class="box">
+<h2>🌸 Carta principal</h2>
+<p>Antes de ti era perdido… tú cambiaste todo.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
 </div>
 
-<div id="c6" class="panel">
-Quiero un futuro contigo 🌙
+<div id="cambio" class="page">
+<div class="box">
+<h2>🧠 Mi cambio</h2>
+<p>Dejé todo lo que me hacía daño porque tú vales más que todo eso.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
 </div>
 
-<h3>🎵 Canciones</h3>
+<div id="amor" class="page">
+<div class="box">
+<h2>💖 Lo que siento</h2>
+<p>Te amo demasiado… eres mi paz, mi mente y mi debilidad bonita.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
+</div>
 
-<button onclick="play('j4eBgK51U04')">💌 Ausente</button>
-<button onclick="play('oiGCL2Ld534')">💖 La Boda</button>
-<button onclick="play('vOwmQbSv1JE')">🌙 La Carta</button>
+<div id="flor" class="page">
+<div class="box">
+<h2>🌸 La flor</h2>
+<p>Mi papá me habló de una flor especial… y eres tú.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
+</div>
 
-<br><br>
+<div id="momentos" class="page">
+<div class="box">
+<h2>💌 Momentos</h2>
+<p>El ave fénix, el espejo, nuestras miradas… todo eso es nuestro.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
+</div>
 
-<iframe id="player" width="0" height="0"></iframe>
+<div id="futuro" class="page">
+<div class="box">
+<h2>🌙 Futuro</h2>
+<p>Quiero una vida contigo, no perfecta… pero real.</p>
+</div>
+<button class="back" onclick="back()">⬅ volver</button>
+</div>
 
+<!-- 🎂 CUMPLEAÑOS ESPECIAL -->
+<div id="cumple" class="page">
+<div class="birthday">
+
+<h1>🎂 Feliz cumpleaños Amira 🌸</h1>
+
+<p>
+Hoy no es un día cualquiera…
+es el día en el que nació la persona que cambió mi vida sin saberlo.
+</p>
+
+<p>
+Desde que llegaste, todo en mí empezó a tener sentido.
+No solo eres mi amor… eres mi calma, mi motivación y mi hogar emocional.
+</p>
+
+<p>
+Quiero desearte lo más importante:
+que seas feliz, de verdad feliz.
+Que nunca te falte paz, amor ni razones para sonreír.
+</p>
+
+<p>
+Si pudiera darte algo hoy, no sería un regalo material…
+sería darte mi promesa:
+estar contigo, cuidarte, y amarte incluso en los días difíciles.
+</p>
+
+<p>
+Gracias por existir, gracias por ser tú,
+y gracias por dejarme ser parte de tu vida.
+</p>
+
+<p style="text-align:center;">
+💖 Te amo hoy, mañana y siempre 💖
+</p>
+
+</div>
+
+<button class="back" onclick="back()">⬅ volver</button>
 </div>
 
 <script>
 
-function start() {
-  document.getElementById("carta").style.display = "block";
+/* START */
+function start(){
+document.getElementById("intro").style.display="none";
+document.getElementById("login").style.display="flex";
 }
 
-function toggle(id) {
-  let el = document.getElementById(id);
-  el.style.display = el.style.display === "block" ? "none" : "block";
+/* LOGIN */
+function enter(){
+let p=document.getElementById("pass").value.toLowerCase().trim();
+if(p==="para amira mi flor"){
+document.getElementById("login").style.display="none";
+document.getElementById("menu").style.display="block";
+hearts();
+}else{
+document.getElementById("err").innerText="Incorrecto 🌸";
+}
 }
 
-function play(id) {
-  document.getElementById("player").src =
-    "https://www.youtube.com/embed/" +
-    id +
-    "?autoplay=1&loop=1&playlist=" +
-    id;
+/* NAV */
+function openPage(id){
+document.getElementById("menu").style.display="none";
+document.getElementById(id).style.display="block";
+}
+
+function back(){
+document.querySelectorAll(".page").forEach(p=>p.style.display="none");
+document.getElementById("menu").style.display="block";
+}
+
+/* HEARTS */
+function hearts(){
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},180);
 }
 
 </script>
