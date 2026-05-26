@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Amira 🌸💌</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+}
+
+#carta {
+  display: none;
+  padding: 20px;
+}
+
+.panel {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Para Amira mi flor</h1>
+
+<p>Presiona para entrar 💌</p>
+
+<button onclick="start()">Entrar</button>
+
+<div id="carta">
+
+<h2>💌 Mi carta para ti</h2>
+
+<p>Eres mi paz, mi amor y mi todo 🌸</p>
+
+<button onclick="toggle('c1')">🌸 Lo que eres</button>
+<button onclick="toggle('c2')">🧠 Mi cambio</button>
+<button onclick="toggle('c3')">💖 Lo que siento</button>
+<button onclick="toggle('c4')">🌸 La flor de mi papá</button>
+<button onclick="toggle('c5')">💌 Momentos</button>
+<button onclick="toggle('c6')">🌙 Futuro</button>
+
+<div id="c1" class="panel">
+Eres mi lugar seguro 💖
+</div>
+
+<div id="c2" class="panel">
+Antes era frío, con vicios… pero tú me cambiaste.
+</div>
+
+<div id="c3" class="panel">
+Te amo demasiado 💌
+</div>
+
+<div id="c4" class="panel">
+Mi papá me habló de una flor… y tú eres esa flor 🌸
+</div>
+
+<div id="c5" class="panel">
+El ave fénix, nuestros momentos, recuerdos únicos 💖
+</div>
+
+<div id="c6" class="panel">
+Quiero un futuro contigo 🌙
+</div>
+
+<h3>🎵 Canciones</h3>
+
+<button onclick="play('j4eBgK51U04')">💌 Ausente</button>
+<button onclick="play('oiGCL2Ld534')">💖 La Boda</button>
+<button onclick="play('vOwmQbSv1JE')">🌙 La Carta</button>
+
+<br><br>
+
+<iframe id="player" width="0" height="0"></iframe>
+
+</div>
+
+<script>
+
+function start() {
+  document.getElementById("carta").style.display = "block";
+}
+
+function toggle(id) {
+  let el = document.getElementById(id);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+function play(id) {
+  document.getElementById("player").src =
+    "https://www.youtube.com/embed/" +
+    id +
+    "?autoplay=1&loop=1&playlist=" +
+    id;
+}
+
+</script>
+
+</body>
+</html>
