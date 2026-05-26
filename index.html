@@ -2,292 +2,100 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Para Amira 🌸💌</title>
+<title>Mi amor 💖</title>
 
 <style>
 body{
-margin:0;
-font-family:Arial;
-background:black;
-color:white;
-overflow-x:hidden;
+  font-family: Arial, sans-serif;
+  background: #0f0f1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* INTRO */
-#intro{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-animation:fade 2s ease;
-}
-
-@keyframes fade{
-from{opacity:0}
-to{opacity:1}
-}
-
-/* LOGIN */
-#login{
-display:none;
-height:100vh;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-text-align:center;
-}
-
-input,button{
-padding:12px;
-margin:6px;
-border-radius:10px;
-border:none;
+h1{
+  color: #ff4d6d;
 }
 
 button{
-background:#e91e63;
-color:white;
-cursor:pointer;
+  background: #ff4d6d;
+  border: none;
+  padding: 12px 16px;
+  margin: 8px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-/* MENU */
-#menu{
-display:none;
-padding:30px;
-text-align:center;
+button:hover{
+  background: #ff1f4b;
 }
 
-/* PAGES */
-.page{
-display:none;
-padding:40px;
-max-width:850px;
-margin:auto;
-animation:slide 0.7s ease;
+.carta{
+  display: none;
+  text-align: left;
+  max-width: 900px;
+  margin: 20px auto;
+  line-height: 1.7;
+  white-space: pre-line;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
 }
-
-@keyframes slide{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-.box{
-background:rgba(255,255,255,0.06);
-padding:25px;
-border-radius:15px;
-backdrop-filter: blur(8px);
-line-height:1.6;
-}
-
-/* NAV */
-.nav button{
-display:block;
-width:100%;
-margin:10px 0;
-}
-
-/* BACK */
-.back{
-background:#444;
-}
-
-/* HEARTS */
-.heart{
-position:absolute;
-color:#ff4d6d;
-font-size:18px;
-animation:float 6s linear infinite;
-}
-
-@keyframes float{
-from{transform:translateY(100vh);}
-to{transform:translateY(-10vh);opacity:0;}
-}
-
-/* BIRTHDAY SPECIAL */
-.birthday{
-background:linear-gradient(135deg,#ff4d6d33,#ffffff10);
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.2);
-line-height:1.7;
-}
-
-h1,h2{text-align:center;}
 </style>
+
 </head>
 
 <body>
 
-<!-- INTRO -->
-<div id="intro">
-<h1>🎬 Una historia para Amira</h1>
-<p>Presiona para comenzar 💌</p>
-<button onclick="start()">Entrar</button>
+<h1>💖 Feliz cumpleaños mi amor 💖</h1>
+
+<p>Presiona cada botón para abrir una parte de mi corazón</p>
+
+<button onclick="mostrar('b1')">💖 Lugar en mi vida</button>
+<button onclick="mostrar('b2')">🔥 Cómo me cambiaste</button>
+<button onclick="mostrar('b3')">💔 Lo que siento</button>
+<button onclick="mostrar('b4')">🌹 Mi florecita</button>
+<button onclick="mostrar('b5')">🕊️ Ave Fénix</button>
+<button onclick="mostrar('b6')">🎂 Carta de cumpleaños</button>
+
+<div id="b1" class="carta">
+Mi amor… si intento explicarte el lugar que ocupas en mi vida, no es algo simple ni algo que pueda resumirse fácil, porque contigo no estoy hablando de una parte de mí… estoy hablando de donde todo empieza a tener sentido.  
+Tú ocupas ese lugar en mi vida que no se puede reemplazar con nada ni con nadie, ese lugar lleno de amor donde solo puedo quererte con todo lo que soy, con todo lo que he vivido y con todo lo que cargo dentro de mí, ocupas el lugar de prioridad, de compromiso contigo, de promesa, de recuerdos que no quiero perder nunca, y si tuviera que describirte en una sola frase sería que si tuviera que elegir mi momento favorito de la vida te elegiría a ti una y otra vez, porque cuando pienso en ti todo lo malo dentro de mí se apaga, todo lo oscuro se va, y aparece algo que no siempre tuve, tranquilidad, lealtad, confianza, amor, contigo siento el mundo con colores otra vez, siento algo tan puro y tan real que me cuesta explicarlo con palabras normales, es como si contigo la vida se sintiera diferente sin necesidad de cambiar el mundo, solo porque tú existes en él conmigo.
 </div>
 
-<!-- LOGIN -->
-<div id="login">
-<h1>🌸 Contraseña</h1>
-<input id="pass" placeholder="escribe aquí">
-<button onclick="enter()">Entrar</button>
-<p id="err"></p>
+<div id="b2" class="carta">
+Mi amor antes de conocerte yo no era esta persona, yo era alguien más frío, más impulsivo, más perdido en muchas cosas, alguien con orgullo, con rencor, con frialdad emocional, con partes de mí que hoy ya no me representan, pasé por etapas donde no estaba bien conmigo mismo, donde tenía hábitos que no me hacían bien, donde fumaba, donde me descuidaba, donde me empastillaba, donde me perdía dentro de mi propia mente sin darme cuenta, pero tú llegaste en el peor momento de mi vida y sin obligarme a nada, sin presionarme, sin intentar cambiarme, simplemente con tu presencia empezaste a mover algo dentro de mí, me hiciste querer ser mejor, me hiciste cuestionarme quién era y quién quería ser, y poco a poco empecé a cambiar, dejé cosas atrás, cambié mi forma de ver la vida, empecé a expresarme mejor, empecé a ser un hombre más consciente, más real, y hoy puedo decirlo sin miedo, soy un hombre nuevo, no perfecto pero sí diferente, y gran parte de eso eres tú mi amor porque tú me agarraste en el peor momento de mi vida y en vez de irte te quedaste, y eso cambió absolutamente todo en mí.
 </div>
 
-<!-- MENU -->
-<div id="menu">
-
-<h2>💌 Elige una historia</h2>
-
-<div class="nav">
-<button onclick="openPage('carta')">🌸 Carta principal</button>
-<button onclick="openPage('cambio')">🧠 Mi cambio</button>
-<button onclick="openPage('amor')">💖 Lo que siento</button>
-<button onclick="openPage('flor')">🌸 La flor</button>
-<button onclick="openPage('momentos')">💌 Momentos</button>
-<button onclick="openPage('futuro')">🌙 Futuro</button>
-<button onclick="openPage('cumple')">🎂 Carta de cumpleaños</button>
+<div id="b3" class="carta">
+Mi amor… me da miedo perderte, no porque no confíe en ti sino porque me envolví en ti de una forma que ni yo mismo esperaba, te pienso demasiado, en todo, en cada cosa, si escucho una canción, si veo algo, si subo una foto, siempre estás tú en mi mente pensando en cómo lo verías tú, en cómo lo sentirías tú, en cómo lo interpretarías tú, y a veces mi mente se llena de pensamientos que no siempre son reales pero igual los siento fuertes, no porque tú me des razones sino porque yo me acostumbré a sentir las cosas muy intensas contigo, a veces siento una dependencia emocional porque contigo me siento lleno, completo, en paz, y aunque a veces pienso que quizás no me amas de la misma forma que yo te amo, eso no viene de ti, viene de cómo yo crecí pensando que no existía algo tan real como lo que tú me estás demostrando, pero contigo todo es diferente, contigo todo es más verdadero, y aun así yo pienso en nuestro futuro, en nuestra casa, en nuestra vida, en tomarte de la mano cuando lo logremos todo y decirte “lo logramos mi amor” porque si hay una persona con la que yo quiero todo eso eres tú.
 </div>
 
+<div id="b4" class="carta">
+Mi amor tú eres mi flor, mi florecita preciosa, eres esa persona hermosa y delicada como pétalos que uno cuida con el alma para no lastimarlos, no porque seas débil sino porque eres valiosa, porque eres alguien que merece amor verdadero, cuidado real, atención sincera, yo te chinea en mi mente, te cuido en mi forma de pensar, te valoro en cada detalle aunque no lo diga siempre, y hay algo que siempre he llevado conmigo desde pequeño que venía de mi papá, una idea de encontrar a alguien que de verdad te entienda, que se quede, que no te falle, y contigo esa idea dejó de ser solo un pensamiento y se volvió algo real, porque contigo todo fluye, nos entendemos incluso sin explicarlo todo, coincidimos en momentos, sentimos cosas al mismo tiempo, y eso no es normal, eso es especial, por eso tú eres mi florecita que yo quiero cuidar con el alma entera.
 </div>
 
-<!-- PAGES -->
-
-<div id="carta" class="page">
-<div class="box">
-<h2>🌸 Carta principal</h2>
-<p>Antes de ti era perdido… tú cambiaste todo.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
+<div id="b5" class="carta">
+Mi amor… hay cosas que solo tú y yo entendemos, como el ave fénix, esa palabra que nació de un momento donde yo estaba muy dormido y la dije sin pensar, pero desde ese día quedó entre nosotros como algo nuestro, como algo que nadie más entiende igual, también recuerdo momentos contigo que no se borran, como la primera vez que estuvimos solos hablando de todo, cuando me dijiste cosas que se me quedaron dentro y me hicieron cambiar decisiones reales de mi vida, porque sí mi amor, tú tuviste un impacto real en mí, me hiciste levantarme de etapas donde estaba mal, donde estaba encerrado en mí mismo, donde no estaba bien, y recuerdo también ese último momento antes de irme, cuando te abracé, cuando te dije que te amaba, cuando nos vimos en el espejo juntos y te dije que nos veíamos lindos, cuando te tomé las manos y te besé la frente, y todo eso no es solo recuerdo, es parte de mí ahora.
 </div>
 
-<div id="cambio" class="page">
-<div class="box">
-<h2>🧠 Mi cambio</h2>
-<p>Dejé todo lo que me hacía daño porque tú vales más que todo eso.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
-</div>
-
-<div id="amor" class="page">
-<div class="box">
-<h2>💖 Lo que siento</h2>
-<p>Te amo demasiado… eres mi paz, mi mente y mi debilidad bonita.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
-</div>
-
-<div id="flor" class="page">
-<div class="box">
-<h2>🌸 La flor</h2>
-<p>Mi papá me habló de una flor especial… y eres tú.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
-</div>
-
-<div id="momentos" class="page">
-<div class="box">
-<h2>💌 Momentos</h2>
-<p>El ave fénix, el espejo, nuestras miradas… todo eso es nuestro.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
-</div>
-
-<div id="futuro" class="page">
-<div class="box">
-<h2>🌙 Futuro</h2>
-<p>Quiero una vida contigo, no perfecta… pero real.</p>
-</div>
-<button class="back" onclick="back()">⬅ volver</button>
-</div>
-
-<!-- 🎂 CUMPLEAÑOS ESPECIAL -->
-<div id="cumple" class="page">
-<div class="birthday">
-
-<h1>🎂 Feliz cumpleaños Amira 🌸</h1>
-
-<p>
-Hoy no es un día cualquiera…
-es el día en el que nació la persona que cambió mi vida sin saberlo.
-</p>
-
-<p>
-Desde que llegaste, todo en mí empezó a tener sentido.
-No solo eres mi amor… eres mi calma, mi motivación y mi hogar emocional.
-</p>
-
-<p>
-Quiero desearte lo más importante:
-que seas feliz, de verdad feliz.
-Que nunca te falte paz, amor ni razones para sonreír.
-</p>
-
-<p>
-Si pudiera darte algo hoy, no sería un regalo material…
-sería darte mi promesa:
-estar contigo, cuidarte, y amarte incluso en los días difíciles.
-</p>
-
-<p>
-Gracias por existir, gracias por ser tú,
-y gracias por dejarme ser parte de tu vida.
-</p>
-
-<p style="text-align:center;">
-💖 Te amo hoy, mañana y siempre 💖
-</p>
-
-</div>
-
-<button class="back" onclick="back()">⬅ volver</button>
+<div id="b6" class="carta">
+Mi amor… hoy es tu cumpleaños, y aunque para el mundo puede ser solo una fecha normal, para mí es el recordatorio más bonito de que existe una persona que cambió por completo la forma en la que yo siento, pienso y veo la vida. Feliz cumpleaños mi amor, de corazón, no como una frase cualquiera, sino como algo que me nace desde lo más real que tengo dentro de mí, porque tú no eres solo alguien importante para mí, tú eres el lugar donde todo dentro de mí se ordena, donde el ruido desaparece y donde por primera vez siento paz de verdad, mi amor tú ocupas ese lugar en mi vida que no se puede reemplazar con nada ni con nadie, ese lugar lleno de amor donde solo puedo quererte con todo lo que soy, con todo lo que he vivido y con todo lo que cargo dentro de mí, ocupas el lugar de prioridad, de compromiso contigo, de promesa, de recuerdos que no quiero perder nunca, y si tuviera que describirte en una sola frase sería que si tuviera que elegir mi momento favorito de la vida te elegiría a ti una y otra vez, porque cuando pienso en ti todo lo malo dentro de mí se apaga, todo lo oscuro se va, y aparece algo que no siempre tuve, tranquilidad, lealtad, confianza, amor, contigo siento el mundo con colores otra vez, siento algo tan puro y tan real que me cuesta explicarlo con palabras normales, es como si contigo la vida se sintiera diferente sin necesidad de cambiar el mundo, solo porque tú existes en él conmigo.  
+Mi amor antes de conocerte yo no era esta persona, yo era alguien más frío, más impulsivo, más perdido en muchas cosas, alguien con orgullo, con rencor, con frialdad emocional, con partes de mí que hoy ya no me representan, pasé por etapas donde no estaba bien conmigo mismo, donde tenía hábitos que no me hacían bien, donde fumaba, donde me descuidaba, donde me empastillaba, donde me perdía dentro de mi propia mente sin darme cuenta, pero tú llegaste en el peor momento de mi vida y sin obligarme a nada, sin presionarme, sin intentar cambiarme, simplemente con tu presencia empezaste a mover algo dentro de mí, me hiciste querer ser mejor, me hiciste cuestionarme quién era y quién quería ser, y poco a poco empecé a cambiar, dejé cosas atrás, cambié mi forma de ver la vida, empecé a expresarme mejor, empecé a ser un hombre más consciente, más real, y hoy puedo decirlo sin miedo, soy un hombre nuevo, no perfecto pero sí diferente, y gran parte de eso eres tú mi amor porque tú me agarraste en el peor momento de mi vida y en vez de irte te quedaste, y eso cambió absolutamente todo en mí.  
+Mi amor… me da miedo perderte, no porque no confíe en ti sino porque me envolví en ti de una forma que ni yo mismo esperaba, te pienso demasiado, en todo, en cada cosa, si escucho una canción, si veo algo, si subo una foto, siempre estás tú en mi mente pensando en cómo lo verías tú, en cómo lo sentirías tú, en cómo lo interpretarías tú, y a veces mi mente se llena de pensamientos que no siempre son reales pero igual los siento fuertes, no porque tú me des razones sino porque yo me acostumbré a sentir las cosas muy intensas contigo, a veces siento una dependencia emocional porque contigo me siento lleno, completo, en paz, y aunque a veces pienso que quizás no me amas de la misma forma que yo te amo, eso no viene de ti, viene de cómo yo crecí pensando que no existía algo tan real como lo que tú me estás demostrando, pero contigo todo es diferente, contigo todo es más verdadero, y aun así yo pienso en nuestro futuro, en nuestra casa, en nuestra vida, en tomarte de la mano cuando lo logremos todo y decirte “lo logramos mi amor” porque si hay una persona con la que yo quiero todo eso eres tú.  
+Mi amor tú eres mi flor, mi florecita preciosa, eres esa persona hermosa y delicada como pétalos que uno cuida con el alma para no lastimarlos, no porque seas débil sino porque eres valiosa, porque eres alguien que merece amor verdadero, cuidado real, atención sincera, yo te chinea en mi mente, te cuido en mi forma de pensar, te valoro en cada detalle aunque no lo diga siempre, y hay algo que siempre he llevado conmigo desde pequeño que venía de mi papá, una idea de encontrar a alguien que de verdad te entienda, que se quede, que no te falle, y contigo esa idea dejó de ser solo un pensamiento y se volvió algo real, porque contigo todo fluye, nos entendemos incluso sin explicarlo todo, coincidimos en momentos, sentimos cosas al mismo tiempo, y eso no es normal, eso es especial, por eso tú eres mi florecita que yo quiero cuidar con el alma entera.  
+Mi amor… hay cosas que solo tú y yo entendemos, como el ave fénix, esa palabra que nació de un momento donde yo estaba muy dormido y la dije sin pensar, pero desde ese día quedó entre nosotros como algo nuestro, como algo que nadie más entiende igual, también recuerdo momentos contigo que no se borran, como la primera vez que estuvimos solos hablando de todo, cuando me dijiste cosas que se me quedaron dentro y me hicieron cambiar decisiones reales de mi vida, porque sí mi amor, tú tuviste un impacto real en mí, me hiciste levantarme de etapas donde estaba mal, donde estaba encerrado en mí mismo, donde no estaba bien, y recuerdo también ese último momento antes de irme, cuando te abracé, cuando te dije que te amaba, cuando nos vimos en el espejo juntos y te dije que nos veíamos lindos, cuando te tomé las manos y te besé la frente, y todo eso no es solo recuerdo, es parte de mí ahora.  
+Mi amor… hoy no es un día cualquiera. Hoy es el día en que nació la persona que sin saberlo cambió completamente la forma en la que yo veo la vida. Feliz cumpleaños mi amor, de corazón… eres mi sol de día y mi estrella de noche, eres el amor de mi vida y la persona con la que quiero todo mi futuro, y aunque la distancia a veces sea difícil, yo estoy dispuesto a hacer hasta lo imposible por ti hasta mi último latido, porque esto que siento no se apaga, esto que siento se queda, y tú eres mi todo.
 </div>
 
 <script>
-
-/* START */
-function start(){
-document.getElementById("intro").style.display="none";
-document.getElementById("login").style.display="flex";
+function mostrar(id){
+  let cartas = document.querySelectorAll('.carta');
+  cartas.forEach(c => c.style.display = "none");
+  document.getElementById(id).style.display = "block";
 }
-
-/* LOGIN */
-function enter(){
-let p=document.getElementById("pass").value.toLowerCase().trim();
-if(p==="para amira mi flor"){
-document.getElementById("login").style.display="none";
-document.getElementById("menu").style.display="block";
-hearts();
-}else{
-document.getElementById("err").innerText="Incorrecto 🌸";
-}
-}
-
-/* NAV */
-function openPage(id){
-document.getElementById("menu").style.display="none";
-document.getElementById(id).style.display="block";
-}
-
-function back(){
-document.querySelectorAll(".page").forEach(p=>p.style.display="none");
-document.getElementById("menu").style.display="block";
-}
-
-/* HEARTS */
-function hearts(){
-setInterval(()=>{
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="💖";
-h.style.left=Math.random()*100+"vw";
-document.body.appendChild(h);
-setTimeout(()=>h.remove(),6000);
-},180);
-}
-
 </script>
 
 </body>
