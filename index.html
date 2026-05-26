@@ -1,118 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para ti ❤️</title>
+<title>Para ti 🌸💌🎂</title>
 
 <style>
-body{
-margin:0;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ff6fa5,#ffb6c1);
-font-family:Arial,sans-serif;
-color:white;
-text-align:center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-#contenido{
-display:none;
-padding:20px;
-max-width:600px;
+.center {
+  text-align: center;
+  max-width: 750px;
+  padding: 20px;
 }
 
-input{
-padding:12px;
-border:none;
-border-radius:20px;
-font-size:16px;
+button, input {
+  padding: 10px;
+  margin: 6px;
+  border-radius: 10px;
+  border: none;
 }
 
-button{
-padding:12px 20px;
-border:none;
-border-radius:20px;
-font-size:16px;
-cursor:pointer;
-margin-top:10px;
+button {
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
 }
 
-#login{
-padding:20px;
-max-width:500px;
+.panel {
+  display: none;
+  margin-top: 15px;
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 12px;
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.heart {
+  position: absolute;
+  color: #ff4d6d;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);}
+  to {transform: translateY(-10vh); opacity: 0;}
+}
+
+h1,h2 {
+  color: #ff4d6d;
 }
 </style>
 </head>
 
 <body>
 
-<div id="login">
-<h1>❤️</h1>
+<div class="center">
 
-<h2>solo una persona puede abrir esta carta</h2>
+<!-- 🎂 CUMPLEAÑOS -->
+<h1>🎂 Feliz cumpleaños mi amor</h1>
 
-<p>si esta carta llegó hasta tus manos, significa que alguien te ama muchísimo</p>
+<div class="panel" style="display:block;">
+<p>
+Hoy es un día especial… el día en que nació la persona más importante de mi vida.
+</p>
 
-<p>escribe la palabra secreta 🌸</p>
+<p>
+Gracias por existir, por ser tú y por cambiar mi mundo.
+</p>
 
-<input type="password" id="clave">
+<p>
+Si pudiera pedir un deseo sería vivir todos tus cumpleaños contigo.
+</p>
 
-<br><br>
-
-<button onclick="entrar()">abrir carta ❤️</button>
+<p>
+Te amo, mi florecita 🌸
+</p>
 </div>
 
-<div id="contenido">
+<button onclick="openLogin()">💌 Abrir carta de amor</button>
 
-<h1>feliz cumpleaños mi amor ❤️</h1>
+<!-- 🔐 LOGIN -->
+<div id="login" class="panel">
+<h2>🌸 Carta de amor</h2>
 
-<p>
-si estás leyendo esto, significa que encontraste la llave de mi corazón.
-</p>
+<p>Escribe la palabra que significa lo que eres para mí</p>
 
-<p>
-gracias por existir, por llegar a mi vida y por hacerme sentir tantas cosas bonitas en tan poco tiempo.
-</p>
+<input id="clave" placeholder="Escribe aquí">
+<br>
+<button onclick="check()">Entrar</button>
 
-<p>
-tal vez llevamos poco tiempo juntos, pero contigo he sentido una conexión que jamás imaginé sentir con alguien.
-</p>
+<p id="error"></p>
+</div>
 
-<p>
-espero que hoy tengas un cumpleaños hermoso, que sonrías muchísimo y que nunca olvides lo especial que eres para mí.
-</p>
+<!-- 💌 CARTA -->
+<div id="carta" class="panel">
 
-<p>
-te quiero, te admiro y agradezco cada día que puedo compartir contigo.
-</p>
+<h2>💌 Para mi florecita</h2>
 
 <p>
-feliz cumpleaños mi florecita 🌸❤️
+Mi amor… aquí están cosas que nunca te dije bien.
 </p>
+
+<button onclick="toggle('c1')">🌸 1. Lo que eres</button>
+<button onclick="toggle('c2')">🧠 2. Cómo me cambiaste</button>
+<button onclick="toggle('c3')">💖 3. Lo que siento</button>
+<button onclick="toggle('c4')">🌸 4. La flor</button>
+<button onclick="toggle('c5')">💌 5. Momentos</button>
+<button onclick="toggle('c6')">🌙 6. Futuro</button>
+
+<div id="c1" class="panel">
+<p>
+Eres mi paz, mi amor, mi prioridad y mi lugar seguro.
+</p>
+<p>
+“Si tuviera que elegir mi momento favorito de la vida, te elegiría a ti una y otra vez.”
+</p>
+<p>
+Contigo todo lo malo desaparece.
+</p>
+</div>
+
+<div id="c2" class="panel">
+<p>
+Antes de ti era frío, perdido y con problemas.
+</p>
+<p>
+Tú llegaste y me cambiaste sin darte cuenta.
+</p>
+<p>
+Dejé vicios, orgullo y frialdad.
+</p>
+<p>
+Me convertí en alguien mejor por ti.
+</p>
+</div>
+
+<div id="c3" class="panel">
+<p>
+Me da miedo perderte porque te amo demasiado.
+</p>
+<p>
+Siempre estás en mi mente.
+</p>
+<p>
+A veces pienso demasiado, pero contigo todo se siente real.
+</p>
+<p>
+Quiero un futuro contigo.
+</p>
+</div>
+
+<div id="c4" class="panel">
+<p>
+Mi papá me dijo que si encontraba una flor especial debía cuidarla con el alma.
+</p>
+<p>
+Y tú eres esa flor 🌸
+</p>
+<p>
+Mi florecita, la que voy a proteger siempre.
+</p>
+</div>
+
+<div id="c5" class="panel">
+<p>
+Dejé de fumar por ti.
+</p>
+<p>
+El espejo contigo, el abrazo antes de irme…
+</p>
+<p>
+Y nuestro “ave fénix”.
+</p>
+</div>
+
+<div id="c6" class="panel">
+<p>
+Sueño contigo y con nosotros.
+</p>
+<p>
+Quiero estar en todos tus cumpleaños.
+</p>
+<p>
+Quiero decirte un día: “lo logramos”.
+</p>
+<p>
+Eres mi todo.
+</p>
+</div>
+
+</div>
+
+<!-- 🎵 MÚSICA -->
+<audio id="music" loop>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
 
 </div>
 
 <script>
-function entrar(){
 
-let clave = document.getElementById("clave").value;
-
-if(clave==="miflorecita"){
-
-document.getElementById("login").style.display="none";
-
-document.getElementById("contenido").style.display="block";
-
-}else{
-
-alert("esa no es la palabra secreta ❤️");
-
+function openLogin() {
+  document.getElementById("login").style.display = "block";
 }
 
+function check() {
+  let clave = document.getElementById("clave").value.toLowerCase().trim();
+
+  if (clave === "para amira mi flor") {
+    document.getElementById("login").style.display = "none";
+    document.getElementById("carta").style.display = "block";
+    document.getElementById("music").play();
+    hearts();
+  } else {
+    document.getElementById("error").innerText = "No es la palabra correcta 🌸";
+  }
 }
+
+function toggle(id) {
+  let el = document.getElementById(id);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+function hearts() {
+  setInterval(() => {
+    let h = document.createElement("div");
+    h.innerHTML = "💖";
+    h.className = "heart";
+    h.style.left = Math.random() * 100 + "vw";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6000);
+  }, 250);
+}
+
 </script>
 
 </body>
